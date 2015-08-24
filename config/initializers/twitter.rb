@@ -1,0 +1,1 @@
+TWTTR = TwitterService.instance
