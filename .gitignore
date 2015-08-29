@@ -14,5 +14,6 @@
 .ruby-version
 config/database.yml
 .env
+.rspec
 
 db/schema.rb
