@@ -1,0 +1,296 @@
+{
+    "created_at": "Fri Aug 28 15:40:47 +0000 2015",
+    "id": 637288728814317600,
+    "id_str": "637288728814317568",
+    "text": "@InfractoresBA auto estacionado en esquina, El Salvador y Bonland, CABA http://t.co/GdXi1VUyC9",
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": 3394083203,
+    "in_reply_to_user_id_str": "3394083203",
+    "in_reply_to_screen_name": "InfractoresBA",
+    "user": {
+        "id": 17032014,
+        "id_str": "17032014",
+        "name": "Ernesto Tagwerker",
+        "screen_name": "etagwerker",
+        "location": "",
+        "description": "Founder @OmbuLabs, The Lean Software Boutique. \n\nI like to build cool stuff with #Ruby and #Javascript.",
+        "url": "http://t.co/ZZi4U2AWwr",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "http://t.co/ZZi4U2AWwr",
+                        "expanded_url": "http://www.ombulabs.com",
+                        "display_url": "ombulabs.com",
+                        "indices": [
+                            0,
+                            22
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 872,
+        "friends_count": 351,
+        "listed_count": 68,
+        "created_at": "Wed Oct 29 00:13:29 +0000 2008",
+        "favourites_count": 1737,
+        "utc_offset": -10800,
+        "time_zone": "Buenos Aires",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 8722,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "B2DFDA",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/171163794/IMG_1002.JPG",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/171163794/IMG_1002.JPG",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/559380312317108224/io2jBKOz_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/559380312317108224/io2jBKOz_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/17032014/1364721795",
+        "profile_link_color": "DD2E44",
+        "profile_sidebar_border_color": "EEEEEE",
+        "profile_sidebar_fill_color": "FFFFFF",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+    },
+    "geo": {
+        "type": "Point",
+        "coordinates": [
+            -34.58255407,
+            -58.43625901
+        ]
+    },
+    "coordinates": {
+        "type": "Point",
+        "coordinates": [
+            -58.43625901,
+            -34.58255407
+        ]
+    },
+    "place": {
+        "id": "018f1cde6bad9747",
+        "url": "https://api.twitter.com/1.1/geo/id/018f1cde6bad9747.json",
+        "place_type": "city",
+        "name": "Ciudad Autónoma de Buenos Aires",
+        "full_name": "Ciudad Autónoma de Buenos Aires, Argentina",
+        "country_code": "AR",
+        "country": "Argentina",
+        "contained_within": [],
+        "bounding_box": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        -58.5317922,
+                        -34.674453
+                    ],
+                    [
+                        -58.353494,
+                        -34.674453
+                    ],
+                    [
+                        -58.353494,
+                        -34.534177
+                    ],
+                    [
+                        -58.5317922,
+                        -34.534177
+                    ]
+                ]
+            ]
+        },
+        "attributes": {}
+    },
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+            {
+                "screen_name": "InfractoresBA",
+                "name": "Infractores de BA",
+                "id": 3394083203,
+                "id_str": "3394083203",
+                "indices": [
+                    0,
+                    14
+                ]
+            }
+        ],
+        "urls": [],
+        "media": [
+            {
+                "id": 637288705582104600,
+                "id_str": "637288705582104576",
+                "indices": [
+                    72,
+                    94
+                ],
+                "media_url": "http://pbs.twimg.com/media/CNgas4OXAAAyeJ1.jpg",
+                "media_url_https": "https://pbs.twimg.com/media/CNgas4OXAAAyeJ1.jpg",
+                "url": "http://t.co/GdXi1VUyC9",
+                "display_url": "pic.twitter.com/GdXi1VUyC9",
+                "expanded_url": "http://twitter.com/etagwerker/status/637288728814317568/photo/1",
+                "type": "photo",
+                "sizes": {
+                    "small": {
+                        "w": 340,
+                        "h": 255,
+                        "resize": "fit"
+                    },
+                    "medium": {
+                        "w": 600,
+                        "h": 450,
+                        "resize": "fit"
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "h": 150,
+                        "resize": "crop"
+                    },
+                    "large": {
+                        "w": 1024,
+                        "h": 768,
+                        "resize": "fit"
+                    }
+                }
+            }
+        ]
+    },
+    "extended_entities": {
+        "media": [
+            {
+                "id": 637288705582104600,
+                "id_str": "637288705582104576",
+                "indices": [
+                    72,
+                    94
+                ],
+                "media_url": "http://pbs.twimg.com/media/CNgas4OXAAAyeJ1.jpg",
+                "media_url_https": "https://pbs.twimg.com/media/CNgas4OXAAAyeJ1.jpg",
+                "url": "http://t.co/GdXi1VUyC9",
+                "display_url": "pic.twitter.com/GdXi1VUyC9",
+                "expanded_url": "http://twitter.com/etagwerker/status/637288728814317568/photo/1",
+                "type": "photo",
+                "sizes": {
+                    "small": {
+                        "w": 340,
+                        "h": 255,
+                        "resize": "fit"
+                    },
+                    "medium": {
+                        "w": 600,
+                        "h": 450,
+                        "resize": "fit"
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "h": 150,
+                        "resize": "crop"
+                    },
+                    "large": {
+                        "w": 1024,
+                        "h": 768,
+                        "resize": "fit"
+                    }
+                }
+            },
+            {
+                "id": 637288705586298900,
+                "id_str": "637288705586298880",
+                "indices": [
+                    72,
+                    94
+                ],
+                "media_url": "http://pbs.twimg.com/media/CNgas4PXAAAdfZs.jpg",
+                "media_url_https": "https://pbs.twimg.com/media/CNgas4PXAAAdfZs.jpg",
+                "url": "http://t.co/GdXi1VUyC9",
+                "display_url": "pic.twitter.com/GdXi1VUyC9",
+                "expanded_url": "http://twitter.com/etagwerker/status/637288728814317568/photo/1",
+                "type": "photo",
+                "sizes": {
+                    "small": {
+                        "w": 340,
+                        "h": 255,
+                        "resize": "fit"
+                    },
+                    "medium": {
+                        "w": 600,
+                        "h": 450,
+                        "resize": "fit"
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "h": 150,
+                        "resize": "crop"
+                    },
+                    "large": {
+                        "w": 1024,
+                        "h": 768,
+                        "resize": "fit"
+                    }
+                }
+            },
+            {
+                "id": 637288705582071800,
+                "id_str": "637288705582071808",
+                "indices": [
+                    72,
+                    94
+                ],
+                "media_url": "http://pbs.twimg.com/media/CNgas4OWgAAdZwW.jpg",
+                "media_url_https": "https://pbs.twimg.com/media/CNgas4OWgAAdZwW.jpg",
+                "url": "http://t.co/GdXi1VUyC9",
+                "display_url": "pic.twitter.com/GdXi1VUyC9",
+                "expanded_url": "http://twitter.com/etagwerker/status/637288728814317568/photo/1",
+                "type": "photo",
+                "sizes": {
+                    "small": {
+                        "w": 340,
+                        "h": 255,
+                        "resize": "fit"
+                    },
+                    "medium": {
+                        "w": 600,
+                        "h": 450,
+                        "resize": "fit"
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "h": 150,
+                        "resize": "crop"
+                    },
+                    "large": {
+                        "w": 1024,
+                        "h": 768,
+                        "resize": "fit"
+                    }
+                }
+            }
+        ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "es"
+}
