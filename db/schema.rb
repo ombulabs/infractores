@@ -11,14 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824210535) do
+ActiveRecord::Schema.define(version: 20150829154430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "postgis"
+
+  create_table "infractions", force: :cascade do |t|
+    t.integer  "tweet_id"
+    t.text     "description"
+    t.integer  "location_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.integer   "infraction_id"
+    t.geography "lonlat",        limit: {:srid=>4326, :type=>"point", :geographic=>true}
+    t.datetime  "created_at",                                                             null: false
+    t.datetime  "updated_at",                                                             null: false
+  end
 
   create_table "tweets", id: false, force: :cascade do |t|
-    t.string "id",   null: false
-    t.text   "json", null: false
+    t.string  "id",      null: false
+    t.text    "json",    null: false
+    t.integer "user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.integer  "twitter_user_id"
+    t.string   "username"
+    t.string   "profile_image_url"
+    t.string   "name"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end
