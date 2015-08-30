@@ -15,13 +15,14 @@ class Tweet < ActiveRecord::Base
   # @param tuit [Twitter::Tweet]
   # @return [Tweet]
   def self.find_or_create!(tuit)
-    user = User.find_or_create!(tuit)
-    opts = {id: tuit.id, user: user}
+    opts = {id: tuit.id}
 
     if result = self.find_by(opts)
       result.update_attributes!(json: tuit.to_json)
     else
       result = self.new(opts.merge(json: tuit.to_json))
+      user = User.find_or_create!(result)
+      result.user = user
       result.save!
     end
 
