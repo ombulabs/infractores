@@ -4,21 +4,21 @@ class Infraction < ActiveRecord::Base
 
   has_many :evidences
 
+  validates_presence_of :evidences
+
   # Builds an {Infraction} using the {Tweet}
   #
   # @param tweet [Tweet]
   # @return [Infraction]
   def self.build_from(tweet)
     result = self.new(tweet: tweet)
-    json = tweet.to_json
+    json = tweet.json
 
     begin
       result.location = Location.find_or_create!(tweet)
-
-      byebug
-      puts "x"
-
+      result.evidences = Evidence.build_from(tweet)
     rescue Exception => e
+      raise e
     end
 
     result
