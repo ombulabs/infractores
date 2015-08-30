@@ -28,6 +28,10 @@ class Tweet < ActiveRecord::Base
     result
   end
 
+  def source
+    @source ||= OpenStruct.new(JSON.load(json))
+  end
+
   private
 
   def enqueue_infraction_job
