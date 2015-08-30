@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150829154430) do
+ActiveRecord::Schema.define(version: 20150830224603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
+
+  create_table "evidences", force: :cascade do |t|
+    t.integer "infraction_id"
+    t.string  "media"
+  end
 
   create_table "infractions", force: :cascade do |t|
     t.integer  "tweet_id"
