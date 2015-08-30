@@ -12,7 +12,7 @@ RSpec.describe Infraction do
       end
 
       it "builds many Evidences and associates it with the Infraction" do
-
+        expect(subject.evidences).not_to be_empty
       end
 
       it "associates the Infraction with the original tweet" do
