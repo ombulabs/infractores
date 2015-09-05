@@ -1,14 +1,71 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Infractores</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Infractores Escrachados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="@InfractoresBA">
 
-<%= yield %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
 
-</body>
+  </head>
+
+  <body>
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container-fluid no-padding">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">@InfractoresBA</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/infractions">Infracciones</a></li>
+                <li><a href="/leaders">Tabla de puntajes</a></li>
+
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container <%= controller_name %>">
+
+      <%= yield %>
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+      <!-- /END THE FEATURETTES -->
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; <%= Date.today.year %> The Lean Software Boutique LLC. Lovingly crafted by <a href="http://www.ombulabs.com" title="Ombu Labs">Ombu Labs</a> in Buenos Aires, Argentina!</p>
+      </footer>
+
+    </div><!-- /.container -->
+  </body>
 </html>
