@@ -10,9 +10,6 @@ gem 'sass-rails', '~> 5.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Bootstrap
-gem "twitter-bootstrap-rails"
-
 # Twitter API
 gem "twitter", "~> 5.14.0"
 
@@ -21,7 +18,9 @@ gem "dotenv-rails", "~> 2.0.2", groups: [:development, :test]
 
 # Images
 gem "carrierwave", "~> 0.10.0"
+gem "carrierwave-aws"
 gem "fog-aws"
+gem "mini_magick"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -42,6 +41,8 @@ group :development, :test do
 end
 
 group :development do
+  gem "rack-livereload"
+  gem 'guard-livereload', '~> 2.4', require: false
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 end
