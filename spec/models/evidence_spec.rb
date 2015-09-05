@@ -7,7 +7,12 @@ RSpec.describe Evidence do
 
     context "valid infraction tweet" do
       before do
+        stub_request(:get, /https:\/\/pbs.twimg.com\/media\/.*.jpg/)
+          .to_return(status: 200,
+                     body:  lambda { |request| File.new(Rails.root + 'spec/support/valid-picture.jpg') })
+
         @evidences = Evidence.build_from(tweet)
+        @evidences.each {|ev| ev.save! }
       end
 
       it "builds evidences and associates them with the Infraction" do
@@ -18,12 +23,9 @@ RSpec.describe Evidence do
 
       it "builds many evidences and uploads it to S3" do
         @evidences.each do |ev|
-          expect(ev.media).to be
+          expect(ev.media.url).to be
+          expect(ev.media.url).not_to be_blank
         end
-      end
-
-      it "associates the Infraction with the original tweet" do
-
       end
     end
   end
