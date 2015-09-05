@@ -7,7 +7,7 @@ class Location < ActiveRecord::Base
   # @return [Location]
   def self.find_or_create!(tweet)
     return unless tweet.source.geo
-    
+
     x = tweet.source.geo["coordinates"][0]
     y = tweet.source.geo["coordinates"][1]
     point = "POINT(#{x} #{y})"
@@ -18,6 +18,14 @@ class Location < ActiveRecord::Base
     end
 
     result
+  end
+
+  def lat
+    lonlat.lat
+  end
+
+  def lng
+    lonlat.lon
   end
 
 end
