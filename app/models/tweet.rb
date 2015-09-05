@@ -7,6 +7,8 @@ class Tweet < ActiveRecord::Base
   belongs_to :user
   has_one :infraction
 
+  validates_presence_of :user
+
   after_save :enqueue_infraction_job
 
   # It uses a {Twitter::Tweet} to find and update an existing {Tweet} or create
