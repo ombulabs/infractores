@@ -10,10 +10,14 @@ class Evidence < ActiveRecord::Base
   # @return [Array]
   def self.build_from(tweet)
     result = []
-    tweet.source.extended_entities["media"].each do |media|
-      result << self.new(infraction: tweet.infraction,
-                         media: media["media_url_https"])
+
+    if extended_entities = tweet.source.extended_entities
+      extended_entities["media"].each do |media|
+        result << self.new(infraction: tweet.infraction,
+                           remote_media_url: media["media_url_https"])
+      end
     end
+
     result
   end
 end
