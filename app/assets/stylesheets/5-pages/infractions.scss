@@ -1,0 +1,44 @@
+.container.infractions {
+  ul li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    list-style-type: none;
+
+    a, span {
+      position: relative;
+      float: left;
+    }
+
+    &.odd {
+      background-color: #f7f7f9;
+      border: 1px solid #e1e1e8;
+    }
+
+    &.even {
+      border: 1px solid #e1e1e8;
+    }
+
+    .map {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      float: right;
+    }
+  }
+
+  h2 {
+    font-size: 5em;
+    text-align: center;
+  }
+
+  div.details {
+    a { padding-right: 3px; }
+  }
+
+  span.description {
+    padding: 1em;
+
+    a { padding-right: 3px; }
+  }
+}
