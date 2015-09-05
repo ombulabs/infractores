@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150830224603) do
   end
 
   create_table "infractions", force: :cascade do |t|
-    t.integer  "tweet_id"
+    t.string   "tweet_id"
     t.text     "description"
     t.integer  "location_id"
     t.datetime "created_at",  null: false
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20150830224603) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer  "twitter_user_id"
+    t.string   "twitter_user_id"
     t.string   "username"
     t.string   "profile_image_url"
     t.string   "name"
