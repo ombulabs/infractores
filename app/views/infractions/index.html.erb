@@ -1,0 +1,24 @@
+<h2>Infracciones</h2>
+
+<!-- Three columns of text below the carousel -->
+<div class="row">
+  <div class="span12">
+    <ul class="span8 infractiones">
+      <% @infractions.each do |infraction| %>
+        <% tweet = infraction.tweet %>
+        <li class="infraction span12 <%= cycle('odd', 'even') %>">
+          <%= link_to infraction do %>
+            <%= image_tag infraction.evidences.first.media.horizontal.url %>
+          <% end %>
+          <div class="details span4">
+            <%= raw decorated_username(infraction) %> reportó: 
+            <span class="description">
+              <%= raw decorated_description(infraction) %>
+            </span>
+          </div>
+          <%= render 'infractions/map', infraction: infraction %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div><!-- /.row -->
