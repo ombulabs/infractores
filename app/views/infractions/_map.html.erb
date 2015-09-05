@@ -1,0 +1,18 @@
+<div class="map" id="map_canvas_<%= infraction.id %>"></div>
+<script>
+  function initialize_<%= infraction.id %>() {
+    var myLatLng = {lat: <%= infraction.lat %>, lng: <%= infraction.lng %>};
+    var mapCanvas = document.getElementById('map_canvas_<%= infraction.id %>');
+    var mapOptions = {
+      center: new google.maps.LatLng(myLatLng.lng, myLatLng.lat),
+      zoom: 16,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({
+      map: map,
+      position: new google.maps.LatLng(myLatLng.lng, myLatLng.lat)
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize_<%= infraction.id %>);
+</script>
