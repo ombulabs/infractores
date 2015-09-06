@@ -346,6 +346,7 @@ GEM
       simple_oauth (~> 0.3.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    vcr (2.9.3)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -376,6 +377,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sidekiq (~> 3.4.2)
   twitter (~> 5.14.0)
+  vcr
   web-console (~> 2.0)
   webmock
 
