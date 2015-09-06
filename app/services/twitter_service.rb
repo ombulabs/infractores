@@ -9,9 +9,9 @@ class TwitterService
 
   attr_accessor :client
 
-  # Downloads all the new mentions since the last mention. Creates all the
-  # necessary {Tweet} records.
-  def download_mentions
+  # Downloads all the new mentions since the last mention and the hashtagged
+  # tweets. Creates all the necessary {Tweet} records.
+  def download_tweets
     opts = {}
     if tweet = Tweet.last
       opts[:since_id] = tweet.id
