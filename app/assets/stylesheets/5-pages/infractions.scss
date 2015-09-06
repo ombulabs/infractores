@@ -19,17 +19,13 @@
       border: 1px solid #e1e1e8;
     }
 
-    .map {
-      width: 300px;
-      height: 300px;
-      position: relative;
-      float: right;
-    }
   }
 
   h2 {
-    font-size: 5em;
+    font-size: 3em;
     text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   div.details {
@@ -40,5 +36,34 @@
     padding: 1em;
 
     a { padding-right: 3px; }
+  }
+
+  .map {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    float: right;
+  }
+}
+
+.container.infractions-show {
+  img {
+    padding: 1em;
+    margin: 0.2em;
+  }
+
+  .detail {
+    padding: 1em;
+    border: 1px solid #CCC;
+    margin-bottom: 1em;
+  }
+
+  .row.bordered {
+    border: 1px solid #CCC;
+  }
+
+  .map {
+    margin-right: 1em;
+    margin-top: 1em;
   }
 }
