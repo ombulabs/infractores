@@ -1,0 +1,10 @@
+<%= link_to infraction_path(infraction.tweet_id) do %>
+  <%= image_tag infraction.evidences.first.media.horizontal.url %>
+<% end %>
+<div class="details span4">
+  <%= render 'infractions/reported_by', infraction: infraction %>
+  <span class="description">
+    <%= raw decorated_description(infraction) %>
+  </span>
+</div>
+<%= render 'infractions/map', infraction: infraction %>
