@@ -19,7 +19,8 @@ gem "dotenv-rails", "~> 2.0.2", groups: [:development, :test]
 # Images
 gem "carrierwave", "~> 0.10.0"
 gem "carrierwave-aws"
-gem "fog-aws"
+gem "fog"
+
 gem "mini_magick"
 
 # Use ActiveModel has_secure_password
