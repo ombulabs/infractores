@@ -52,4 +52,5 @@ group :test do
   gem 'factory_girl_rails', '4.5.0'
   gem 'rspec-rails', '~> 3.3.3'
   gem 'webmock'
+  gem 'vcr'
 end
