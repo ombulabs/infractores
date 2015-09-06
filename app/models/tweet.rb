@@ -35,6 +35,15 @@ class Tweet < ActiveRecord::Base
     @source ||= OpenStruct.new(JSON.load(json))
   end
 
+  def source_url
+    "https://twitter.com/#{user.username}/status/#{source.id_str}"
+  end
+
+  def created_at
+    @created_at ||= Time.parse(source["created_at"])
+    @created_at.in_time_zone
+  end
+
   private
 
   def enqueue_infraction_job
