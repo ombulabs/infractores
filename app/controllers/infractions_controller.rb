@@ -7,6 +7,6 @@ class InfractionsController < ApplicationController
 
   # GET /infractions/:id
   def show
-    @infraction = Infraction.find(params[:id])
+    @infraction = Infraction.find_by(tweet_id: params[:id])
   end
 end
