@@ -36,7 +36,7 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="/infractions">Infracciones</a></li>
+                <li><%= link_to 'Infracciones', infractions_path %></li>
                 <li><a href="/leaders">Tabla de puntajes</a></li>
 
               </ul>
@@ -51,7 +51,7 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container <%= controller_name %>">
+    <div class="container <%= controller_name %> <%= controller_name %>-<%= action_name %>">
 
       <%= yield %>
 
