@@ -42,6 +42,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "bullet"
   gem "rack-livereload"
   gem 'guard-livereload', '~> 2.4', require: false
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -49,6 +50,7 @@ group :development do
 end
 
 group :test do
+  gem 'simplecov', require: false
   gem 'factory_girl_rails', '4.5.0'
   gem 'rspec-rails', '~> 3.3.3'
   gem 'webmock'
