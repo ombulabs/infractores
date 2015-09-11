@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   validates :username, :name, :twitter_user_id, presence: true
+  has_many :infractions, through: :tweets
 
   # It uses a {Tweet} to find and update an existing {User} or create
   # a new one
@@ -27,4 +28,7 @@ class User < ActiveRecord::Base
     result
   end
 
+  def update_infractions_counter!
+    update_column :infractions_count, infractions.legitimate.count
+  end
 end
