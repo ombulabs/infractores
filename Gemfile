@@ -49,6 +49,10 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
+group :production do
+  gem "uglifier"
+end
+
 group :test do
   gem 'simplecov', require: false
   gem 'factory_girl_rails', '4.5.0'
