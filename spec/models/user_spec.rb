@@ -4,9 +4,9 @@ RSpec.describe User do
   describe "valid?" do
     it "expects username, name, twitter_user_id to be present" do
       expect(subject.valid?).to be_falsey
-      expect(subject.errors.full_messages).to include("Username can't be blank")
-      expect(subject.errors.full_messages).to include("Name can't be blank")
-      expect(subject.errors.full_messages).to include("Twitter user can't be blank")
+      expect(subject.errors.full_messages).to include("Username no puede estar en blanco")
+      expect(subject.errors.full_messages).to include("Name no puede estar en blanco")
+      expect(subject.errors.full_messages).to include("Twitter user no puede estar en blanco")
     end
   end
 
