@@ -83,6 +83,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.8)
     excon (0.45.4)
+    execjs (2.6.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.5.0)
@@ -355,6 +356,9 @@ GEM
       simple_oauth (~> 0.3.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (2.7.1)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
     uniform_notifier (1.9.0)
     vcr (2.9.3)
     web-console (2.2.1)
@@ -389,6 +393,7 @@ DEPENDENCIES
   sidekiq (~> 3.4.2)
   simplecov
   twitter (~> 5.14.0)
+  uglifier
   vcr
   web-console (~> 2.0)
   webmock
