@@ -35,9 +35,8 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><%= link_to 'Infracciones', infractions_path %></li>
-                <li><a href="/leaders">Tabla de puntajes</a></li>
+                <li class="<%= calculate_class('infractions', '') %>"><%= link_to 'Infracciones', infractions_path %></li>
+                <li class="<%= calculate_class('leaderboard') %>"><a href="/leaderboard">Tabla de puntajes</a></li>
 
               </ul>
             </div><!--/.nav-collapse -->
