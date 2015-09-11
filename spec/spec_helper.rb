@@ -1,6 +1,9 @@
 require 'webmock/rspec'
 require 'fog/aws'
 require 'vcr'
+require 'simplecov'
+
+SimpleCov.start 'rails'
 
 VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
