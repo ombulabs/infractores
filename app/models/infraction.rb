@@ -10,7 +10,11 @@ class Infraction < ActiveRecord::Base
 
   delegate :lat, :lng, to: :location
   delegate :source_url, to: :tweet
-  delegate :username, to: :user
+  delegate :username, :update_infractions_counter!, to: :user
+
+  after_save :update_infractions_counter!
+
+  scope :legitimate, -> { where(legitimate: true) }
 
   # Builds an {Infraction} using the {Tweet}
   #
@@ -20,12 +24,8 @@ class Infraction < ActiveRecord::Base
     result = self.new(tweet: tweet, description: tweet.source.text)
     json = tweet.json
 
-    begin
-      result.location = Location.find_or_create!(tweet)
-      result.evidences = Evidence.build_from(tweet)
-    rescue Exception => e
-      raise e
-    end
+    result.location = Location.find_or_create!(tweet)
+    result.evidences = Evidence.build_from(tweet)
 
     result
   end
