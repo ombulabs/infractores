@@ -1,0 +1,21 @@
+<h2>Table de Puntajes</h2>
+
+<!-- Three columns of text below the carousel -->
+<div class="row">
+  <div class="span12">
+    <table class="table table-condensed table-responsive table-hover">
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Denuncias</th>
+        </tr>
+      </thead>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= raw decorated_username(user) %></td>
+          <td><%= user.infractions_count %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div><!-- /.row -->
