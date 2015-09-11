@@ -29,7 +29,10 @@
   }
 
   div.details {
-    a { padding-right: 3px; }
+    a {
+      padding-right: 3px;
+      display: inline-block;
+    }
   }
 
   span.description {
