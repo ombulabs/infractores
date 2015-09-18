@@ -8,7 +8,7 @@ class Infraction < ActiveRecord::Base
   validates_presence_of :evidences
   validates_presence_of :location
 
-  delegate :lat, :lng, to: :location
+  delegate :lat, :lon, to: :location
   delegate :source_url, to: :tweet
   delegate :username, :update_infractions_counter!, to: :user
 
