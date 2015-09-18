@@ -3,7 +3,7 @@ class InfractionsController < ApplicationController
 
   # GET /infractions
   def index
-    @infractions = @scope.order("infractions.id DESC")
+    @infractions = @scope.legitimate.order("infractions.id DESC")
   end
 
   # GET /infractions/:id
