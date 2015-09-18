@@ -4,7 +4,7 @@
 <div class="details span4">
   <%= render 'infractions/reported_by', infraction: infraction %>
   <span class="description">
-    <%= raw decorated_description(infraction) %>
+    <div class="tweet" tweetID="<%= infraction.tweet_id %>"></div>
   </span>
 </div>
 <%= render 'infractions/map', infraction: infraction %>
