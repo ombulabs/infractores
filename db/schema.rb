@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20150911025204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "postgis"
 
   create_table "evidences", force: :cascade do |t|
     t.integer "infraction_id"
@@ -32,10 +31,11 @@ ActiveRecord::Schema.define(version: 20150911025204) do
   end
 
   create_table "locations", force: :cascade do |t|
-    t.integer   "infraction_id"
-    t.geography "lonlat",        limit: {:srid=>4326, :type=>"point", :geographic=>true}
-    t.datetime  "created_at",                                                             null: false
-    t.datetime  "updated_at",                                                             null: false
+    t.integer  "infraction_id"
+    t.decimal  "lon",           precision: 10, scale: 6, null: false
+    t.decimal  "lat",           precision: 10, scale: 6, null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   create_table "tweets", id: false, force: :cascade do |t|
