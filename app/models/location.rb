@@ -8,24 +8,10 @@ class Location < ActiveRecord::Base
   def self.find_or_create!(tweet)
     return unless tweet.source.geo
 
-    x = tweet.source.geo["coordinates"][0]
-    y = tweet.source.geo["coordinates"][1]
-    point = "POINT(#{x} #{y})"
+    lat = tweet.source.geo["coordinates"][0]
+    lon = tweet.source.geo["coordinates"][1]
 
-    unless result = find_by(lonlat: point)
-      result = new(lonlat: point)
-      result.save!
-    end
-
-    result
-  end
-
-  def lat
-    lonlat.lat
-  end
-
-  def lng
-    lonlat.lon
+    find_or_create_by(lon: lon, lat: lat)
   end
 
 end
