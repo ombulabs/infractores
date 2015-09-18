@@ -13,7 +13,7 @@
       <% @users.each do |user| %>
         <tr>
           <td><%= raw decorated_username(user) %></td>
-          <td><%= user.infractions_count %></td>
+          <td><%= link_to user.infractions_count, "/#{user.username}" %></td>
         </tr>
       <% end %>
     </table>
