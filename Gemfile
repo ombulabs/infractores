@@ -30,6 +30,8 @@ gem "mini_magick"
 # gem 'unicorn'
 gem 'sidekiq', '~> 3.4.2'
 
+gem "thin"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,7 +41,6 @@ group :development, :test do
 end
 
 group :development do
-  gem "thin"
   gem "foreman"
   gem "bullet"
   gem "rack-livereload"
