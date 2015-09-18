@@ -39,6 +39,8 @@ group :development, :test do
 end
 
 group :development do
+  gem "thin"
+  gem "foreman"
   gem "bullet"
   gem "rack-livereload"
   gem 'guard-livereload', '~> 2.4', require: false
