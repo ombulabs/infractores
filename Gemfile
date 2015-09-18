@@ -30,9 +30,6 @@ gem "mini_magick"
 # gem 'unicorn'
 gem 'sidekiq', '~> 3.4.2'
 
-# Geospatial Postgres
-gem 'activerecord-postgis-adapter'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
