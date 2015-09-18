@@ -1,22 +1,23 @@
-<h2>Infracción #<%= @infraction.tweet_id %></h2>
+<h2>Infracción #<%= @infraction.tweet_id %>
+</h2>
 
 <div class="row detail bordered">
   <div class="span12">
     <div class="row">
       <%= render 'infractions/reported_by', infraction: @infraction %>
     </div>
-    <div class="row description">
-      <%= raw decorated_description(@infraction) %>
+    <div class="row description span7">
+      <div class="tweet" tweetID="<%= @infraction.tweet_id %>"></div>
+      <div class="row source">
+        [Fuente: <%= link_to 'Twitter', @infraction.source_url %>]
+      </div>
     </div>
-    <div class="row source">
-      [Fuente: <%= link_to 'Twitter', @infraction.source_url %>]
-    </div>
+    <%= render 'infractions/map', infraction: @infraction %>
   </div>
 </div>
 
 <div class="row bordered">
   <span class="span12">
-    <%= render 'infractions/map', infraction: @infraction %>
     <% @infraction.evidences.each do |ev| %>
       <%= image_tag ev.media.horizontal.url %>
     <% end %>
