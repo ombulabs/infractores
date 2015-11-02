@@ -13,6 +13,8 @@ gem 'jquery-rails'
 # Twitter API
 gem "twitter", "~> 5.14.0"
 
+gem "twitter-bootstrap-rails"
+
 # Env variables
 gem "dotenv-rails", "~> 2.0.2", groups: [:development, :test]
 
