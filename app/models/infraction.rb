@@ -4,8 +4,6 @@ class Infraction < ActiveRecord::Base
   has_many :evidences
   has_one :user, through: :tweet
 
-  validates_presence_of :lon
-  validates_presence_of :lat
   validates_presence_of :evidences
 
   delegate :source_url, to: :tweet
