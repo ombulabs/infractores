@@ -1,14 +1,13 @@
 class Infraction < ActiveRecord::Base
   belongs_to :tweet
-  belongs_to :location
 
   has_many :evidences
   has_one :user, through: :tweet
 
+  validates_presence_of :lon
+  validates_presence_of :lat
   validates_presence_of :evidences
-  validates_presence_of :location
 
-  delegate :lat, :lon, to: :location
   delegate :source_url, to: :tweet
   delegate :username, :update_infractions_counter!, to: :user
 
@@ -21,10 +20,22 @@ class Infraction < ActiveRecord::Base
   # @param tweet [Tweet]
   # @return [Infraction]
   def self.build_from(tweet)
-    result = self.new(tweet: tweet, description: tweet.source.text)
+    if tweet.source.geo
+      lat = tweet.source.geo["coordinates"][0]
+      lon = tweet.source.geo["coordinates"][1]
+    else
+      lat = lon = nil
+    end
+
+    result = self.new(
+      tweet: tweet,
+      description: tweet.source.text,
+      lat: lat,
+      lon: lon
+    )
+
     json = tweet.json
 
-    result.location = Location.find_or_create!(tweet)
     result.evidences = Evidence.build_from(tweet)
 
     result
