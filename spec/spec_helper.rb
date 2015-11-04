@@ -86,11 +86,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-
-def valid_twitter_tweet
-  json = File.read(Rails.root.join('spec', 'support', 'valid-infraction.json'))
-  result = Twitter::Tweet.new(id: 1234)
-  allow(result).to receive(:to_json).and_return(json)
-
-  result
-end
