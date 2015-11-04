@@ -17,13 +17,13 @@ class TwitterService
       opts[:since_id] = tweet.id
     end
 
-    tl = client.user_timeline('InfractoresBA', opts)
+    tl = client.mentions_timeline(opts)
 
     tl.each do |tuit|
       Tweet.find_or_create!(tuit)
     end
 
-    tl = client.search "#InfractoresBA -rt"
+    tl = client.search "InfractoresBA -rt"
 
     tl.each do |tuit|
       Tweet.find_or_create!(tuit)
