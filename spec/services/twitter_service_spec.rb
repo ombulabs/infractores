@@ -27,7 +27,7 @@ RSpec.describe "TwitterService" do
     context "search and mentions return only one tweet" do
       before do
         allow(twitter_service.client)
-          .to(receive(:user_timeline)
+          .to(receive(:mentions_timeline)
             .and_return([tweet]))
         allow(twitter_service.client)
           .to(receive(:search)
@@ -52,7 +52,9 @@ RSpec.describe "TwitterService" do
 
         it 'create tweet' do
           expect do
-            twitter_service.download_tweets
+            VCR.use_cassette("user-tweets") do
+              twitter_service.download_tweets
+            end
           end.to change(Tweet, :count).by(1)
         end
       end
@@ -62,7 +64,9 @@ RSpec.describe "TwitterService" do
 
         it 'create tweet' do
           expect do
-            twitter_service.download_tweets
+            VCR.use_cassette("user-tweets") do
+              twitter_service.download_tweets
+            end
           end.to change(Tweet, :count).by(1)
         end
       end
@@ -74,7 +78,7 @@ RSpec.describe "TwitterService" do
           VCR.use_cassette("user-tweets") do
             twitter_service.download_tweets
           end
-        end.to change(Tweet, :count).by(9)
+        end.to change(Tweet, :count).by(22)
       end
     end
   end
