@@ -23,7 +23,7 @@ class TwitterService
       Tweet.find_or_create!(tuit)
     end
 
-    tl = client.search "InfractoresBA -rt"
+    tl = client.search "#InfractoresBA -rt"
 
     tl.each do |tuit|
       Tweet.find_or_create!(tuit)
