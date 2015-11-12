@@ -1,1 +1,4 @@
-El <%= localize decorated_time(infraction), format: :long %>hs <%= raw decorated_username(infraction) %> reportó:
+<p>
+  <span>Reportado por <%= raw decorated_username(infraction) %></span>
+  <span class="date"><%= localize decorated_time(infraction), format: :short %>hs. </span>
+</p>
