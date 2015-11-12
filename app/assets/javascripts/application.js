@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.fancybox.pack
+//= require jquery.fancybox-buttons
 //= require_tree .
