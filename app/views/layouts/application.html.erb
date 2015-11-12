@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="@InfractoresBA">
-
+    <link href='https://fonts.googleapis.com/css?family=Rubik:400,500,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -40,23 +41,16 @@
     ================================================== -->
     <div class="navbar-wrapper">
       <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container-fluid no-padding">
+      <div>
 
         <div class="navbar navbar-inverse">
           <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="#">@InfractoresBA</a>
+            <h1 class="brand"><ahref="#">@InfractoresBA</a></h1>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="<%= calculate_class('infractions', '') %>"><%= link_to 'Infracciones', infractions_path %></li>
                 <li class="<%= calculate_class('leaderboard') %>"><a href="/leaderboard">Tabla de puntajes</a></li>
-
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -69,21 +63,15 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container <%= controller_name %> <%= controller_name %>-<%= action_name %>">
+    <div class="<%= controller_name %> <%= controller_name %>-<%= action_name %>">
 
       <%= yield %>
 
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-      <!-- /END THE FEATURETTES -->
-
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; <%= Date.today.year %> The Lean Software Boutique LLC. Lovingly crafted by <a href="http://www.ombulabs.com" title="Ombu Labs">Ombu Labs</a> in Buenos Aires, Argentina!</p>
-      </footer>
-
     </div><!-- /.container -->
+    <!-- FOOTER -->
+    <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>&copy; <%= Date.today.year %> The Lean Software Boutique LLC. Lovingly crafted by <a href="http://www.ombulabs.com" title="Ombu Labs">Ombu Labs</a> in Buenos Aires, Argentina!</p>
+    </footer>
   </body>
 </html>
