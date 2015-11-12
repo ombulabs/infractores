@@ -1,0 +1,29 @@
+.container.infractions-show {
+  img {
+    padding: 1em;
+    margin: 0.2em;
+  }
+
+  .detail {
+    padding: 1em;
+    border: 1px solid #CCC;
+    margin-bottom: 1em;
+  }
+
+  .row.bordered {
+    border: 1px solid #CCC;
+  }
+
+  .map {
+    margin-right: 1em;
+    margin-top: 1em;
+  }
+
+  .tweet {
+    min-height: 210px;
+  }
+
+  .source {
+    margin-left: 0;
+  }
+}

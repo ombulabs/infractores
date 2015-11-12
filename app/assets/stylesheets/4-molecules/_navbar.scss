@@ -1,0 +1,38 @@
+/* Colors */
+
+@import "1-utilities/variables";
+
+.navbar-inverse{
+  background: $blue;
+  border-radius: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  //-webkit-box-shadow: rgba(0,0,0,0.3) 0 2px 3px;
+  //-moz-box-shadow: rgba(0,0,0,0.3) 0 2px 3px;
+  //box-shadow: rgba(0,0,0,0.3) 0 2px 3px;
+  padding:1em;
+  border: 0;
+  max-width: 550px;
+  width: 50%;
+  .brand{
+    color: $blue;
+    font-size: 20px;
+    line-height: 50px;
+    background: image-url("logo-infractores.svg");
+    background-size: 100%;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    width: 130px;
+    margin: 10px 0;
+    height: 43px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width:768px){
+  .navbar-inverse{
+    width: 100%;
+    max-width: none;
+  }
+}

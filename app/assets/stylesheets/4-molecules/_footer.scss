@@ -1,0 +1,32 @@
+/* Colors */
+
+@import "1-utilities/variables";
+
+footer{
+  position: relative;
+  z-index: 1;
+  width: 50%;
+  max-width: 550px;
+  background-color: $yellow;
+  padding: 2em 1em;
+  text-align: center;
+  p.pull-right{
+    margin: 0;
+    float: none !important;
+    margin-bottom: 20px;
+    a{
+      background: $red;
+      padding: 10px;
+      color: $yellow;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  footer{
+    max-width: none;
+    width: 100%;
+  }
+}
