@@ -1,14 +1,44 @@
-<h2>Infracciones</h2>
-
-<!-- Three columns of text below the carousel -->
-<div class="row">
+<div class="list-container">
   <div class="span12">
-    <ul class="span8 infractiones">
+    <ul class="span8 infractions">
       <% @infractions.each do |infraction| %>
-        <li class="infraction span12 <%= cycle('odd', 'even') %>">
+        <li id="infraction-<%= infraction.id %>" class="infraction span12 <%= cycle('odd', 'even') %>">
           <%= render 'infractions/summary', infraction: infraction %>
         </li>
       <% end %>
     </ul>
   </div>
-</div><!-- /.row -->
+</div>
+<div class="main-map">
+  <div class="map" id="map_canvas_main"></div>
+  <script>
+    var infraction_markers = <%= raw @infraction_markers.to_json %>;
+    function initialize_main_map() {
+      var myLatLng = {lat: -34.592894, lng: -58.452826 };
+      var mapCanvas = document.getElementById('map_canvas_main');
+      var mapOptions = {
+        center: myLatLng,
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      $.each(infraction_markers, function(i, marker_data) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: { lat: parseFloat(marker_data[0]), lng: parseFloat(marker_data[1]) }
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          var new_url = "#infraction-" + marker_data[2];
+          if(window.location.href.indexOf("#infraction-") > 0) {
+            var regex = /#infraction-\d+/;
+            window.location.href = window.location.href.replace(regex, new_url)
+          } else {
+           window.location.href = window.location.href + new_url;
+         }
+        });
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize_main_map );
+  </script>
+</div>
+<!-- /.row -->
