@@ -1,7 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe "TwitterService" do
-  subject { TwitterService.instance }
+  let(:twitter_service) { TwitterService.instance }
+  let(:filename) { 'valid-infraction.json' }
+  let(:tweet_json) { File.read(Rails.root.join('spec', 'support', filename)) }
+  let(:tweet) { Twitter::Tweet.new(id: 1234) }
+
+  before do
+    allow(tweet).to receive(:to_json).and_return(tweet_json)
+  end
 
   describe "#instance" do
     it "returns an instance of TwitterService" do
@@ -19,37 +26,59 @@ RSpec.describe "TwitterService" do
   describe "#download_tweets" do
     context "search and mentions return only one tweet" do
       before do
-        allow(subject.client)
+        allow(twitter_service.client)
           .to(receive(:mentions_timeline)
-                .and_return([valid_twitter_tweet]))
-        allow(subject.client)
+            .and_return([tweet]))
+        allow(twitter_service.client)
           .to(receive(:search)
-                .and_return([valid_twitter_tweet]))
+            .and_return([tweet]))
       end
 
       it "creates one Tweet per mention and search" do
         expect do
-          subject.download_tweets
+          twitter_service.download_tweets
         end.to change(Tweet, :count).by(1)
       end
 
       it "creates one and only one Tweet per mention and search" do
         expect do
-          subject.download_tweets
-          subject.download_tweets
+          twitter_service.download_tweets
+          twitter_service.download_tweets
         end.to change(Tweet, :count).by(1)
+      end
+
+      context 'tweet without geo' do
+        let(:filename) { 'infraction-without-geo.json' }
+
+        it 'create tweet' do
+          expect do
+            VCR.use_cassette("user-tweets") do
+              twitter_service.download_tweets
+            end
+          end.to change(Tweet, :count).by(1)
+        end
+      end
+
+      context 'tweet without media' do
+        let(:filename) { 'infraction-without-media.json' }
+
+        it 'create tweet' do
+          expect do
+            VCR.use_cassette("user-tweets") do
+              twitter_service.download_tweets
+            end
+          end.to change(Tweet, :count).by(1)
+        end
       end
     end
 
     context "search and mentions return 15 tweets" do
       it "creates one Tweet per mention and search" do
-        VCR.use_cassette("search-tweets") do
-          VCR.use_cassette("mentions-tweets") do
-            expect do
-              subject.download_tweets
-            end.to change(Tweet, :count).by(15)
+        expect do
+          VCR.use_cassette("user-tweets") do
+            twitter_service.download_tweets
           end
-        end
+        end.to change(Tweet, :count).by(22)
       end
     end
   end

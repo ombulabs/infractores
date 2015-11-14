@@ -11,7 +11,7 @@ class TweetInspector
       if infraction.save
         puts "Great success!"
       else
-        # TODO Notify user? 
+        Rails.logger.info "Could not save Infraction: #{infraction.errors.messages}"
       end
     end
   end

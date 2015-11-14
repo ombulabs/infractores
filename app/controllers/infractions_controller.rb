@@ -14,7 +14,7 @@ class InfractionsController < ApplicationController
   private
 
   def load_scope
-    @scope = Infraction.includes(:evidences, :tweet, :location, :user)
+    @scope = Infraction.includes(:evidences, :tweet, :user)
     if params[:username]
       @scope = @scope.where("users.username" => params[:username])
     end
