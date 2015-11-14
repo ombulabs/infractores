@@ -41,7 +41,7 @@ RSpec.describe "TwitterService" do
       end
     end
 
-    context "search returns 4 tweets" do
+    context "search and mentions return 15 tweets" do
       it "creates one Tweet per mention and search" do
         VCR.use_cassette("search-tweets") do
           VCR.use_cassette("mentions-tweets") do
