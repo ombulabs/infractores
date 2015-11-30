@@ -12,4 +12,11 @@ $(document).ready(function(){
     var init_map = "initialize_" + infraction_id;
     window[init_map]();
   });
+
+  $( "#info, #close" ).click(function(event) {
+    event.preventDefault();
+    $("body").toggleClass("overflow");
+    $("#description").toggle();
+  });
+
 });

@@ -11,28 +11,61 @@
   //-webkit-box-shadow: rgba(0,0,0,0.3) 0 2px 3px;
   //-moz-box-shadow: rgba(0,0,0,0.3) 0 2px 3px;
   //box-shadow: rgba(0,0,0,0.3) 0 2px 3px;
-  padding:1em;
+  padding: 1em 1em 0 1em;
   border: 0;
   max-width: 550px;
   width: 50%;
-  .brand{
-    color: $blue;
-    font-size: 20px;
-    line-height: 50px;
-    background: image-url("logo-infractores.svg");
-    background-size: 100%;
-    text-indent: -9999px;
-    background-repeat: no-repeat;
-    width: 130px;
-    margin: 10px 0;
-    height: 43px;
+  .navbar-inner{
+    width: 90%;
     margin: auto;
+    min-height: 40px;
   }
+  .brand{
+    color: $red;
+    font-size: 18px;
+    margin: 0;
+    background-color: $red;
+    float: left;
+    padding: 5px 10px;
+    a{
+      color: $blue;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  #info{
+    line-height: 32px;
+    float: right;
+    font-size: 14px;
+    color: $white;
+    &:hover{
+      color: $red;
+      text-decoration: none;
+    }
+  }
+}
+#description{
+  display: none;
+  background-color: $light_yellow;
+  padding: 5%;
+  color: $blue;
+  line-height: 24px;
+  font-size: 14px;
+  position: fixed;
+  z-index: 2;
+  top: 52px;
+  height: 100%;
+  width: 50%;
+  max-width: 550px;
 }
 
 @media screen and (max-width:768px){
-  .navbar-inverse{
+  .navbar-inverse, #description{
     width: 100%;
     max-width: none;
+    &#description{
+      padding: 7%;
+    }
   }
 }
