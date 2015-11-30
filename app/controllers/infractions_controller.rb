@@ -3,7 +3,7 @@ class InfractionsController < ApplicationController
 
   # GET /infractions
   def index
-    @infractions = @scope.legitimate.order("infractions.created_at ASC")
+    @infractions = @scope.legitimate.order("infractions.reported_at DESC")
     @infraction_markers = @infractions.pluck(:lat, :lon, :id)
   end
 

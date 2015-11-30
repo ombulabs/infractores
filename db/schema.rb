@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102221811) do
+ActiveRecord::Schema.define(version: 20151117194703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20151102221811) do
     t.boolean  "legitimate",                           default: true
     t.decimal  "lat",         precision: 10, scale: 6,                null: false
     t.decimal  "lon",         precision: 10, scale: 6,                null: false
+    t.datetime "reported_at"
   end
 
   create_table "tweets", id: false, force: :cascade do |t|
