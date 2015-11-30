@@ -45,8 +45,10 @@
 
         <div class="navbar navbar-inverse">
           <div class="navbar-inner">
-            <h1 class="brand"><ahref="#">@InfractoresBA</a></h1>
+            <h1 class="brand"><a href="#">InfractoresBA</a></h1>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <a href="#" id="info">¿Cómo funciona?</a>
+
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="<%= calculate_class('infractions', '') %>"><%= link_to 'Infracciones', infractions_path %></li>
@@ -55,6 +57,16 @@
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
+        <div id="description">
+          <p>Para reportar una infracción sólo es necesario mencionar a <strong>@InfractoresBA</strong> o agregar el hashtag <strong>#InfractoresBA</strong> a tu tweet.</p>
+          <p>Una denuncia válida debe tener:</p>
+          <ul>
+            <li>Por lo menos una foto que muestre la infracción</li>
+            <li>Geolocalización activada al momento de enviar el tweet</li>
+          </ul>
+          <a href="#" id="close">Cerrar</a>
+        </div>
+
 
       </div> <!-- /.container -->
     </div><!-- /.navbar-wrapper -->
