@@ -1,14 +1,18 @@
-<h2>Infracciones</h2>
-
-<!-- Three columns of text below the carousel -->
-<div class="row">
+<div class="list-container">
   <div class="span12">
-    <ul class="span8 infractiones">
+    <ul class="span8 infractions">
       <% @infractions.each do |infraction| %>
-        <li class="infraction span12 <%= cycle('odd', 'even') %>">
+        <li id="infraccion-<%= infraction.id %>" class="infraction span12 <%= cycle('odd', 'even') %>">
           <%= render 'infractions/summary', infraction: infraction %>
         </li>
       <% end %>
     </ul>
   </div>
-</div><!-- /.row -->
+</div>
+<div class="main-map">
+  <div class="map" id="map_canvas_main"></div>
+  <script>
+    var infractionMarkers = <%= raw @infraction_markers.to_json %>;
+  </script>
+</div>
+<!-- /.row -->

@@ -75,10 +75,10 @@ RSpec.describe "TwitterService" do
     context "search and mentions return 15 tweets" do
       it "creates one Tweet per mention and search" do
         expect do
-          VCR.use_cassette("user-tweets") do
+          VCR.use_cassette("search-tweets") do
             twitter_service.download_tweets
           end
-        end.to change(Tweet, :count).by(22)
+        end.to change(Tweet, :count).by(20)
       end
     end
   end

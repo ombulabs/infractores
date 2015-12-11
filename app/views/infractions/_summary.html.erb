@@ -1,10 +1,23 @@
-<%= link_to infraction_path(infraction.tweet_id) do %>
-  <%= image_tag infraction.evidences.first.media.horizontal.url %>
-<% end %>
-<div class="details span4">
-  <%= render 'infractions/reported_by', infraction: infraction %>
-  <span class="description">
-    <div class="tweet" tweetID="<%= infraction.tweet_id %>"></div>
-  </span>
+<div class="content">
+  <div class="details span4">
+    <%= render 'infractions/reported_by', infraction: infraction %>
+    <div class="description">
+      <div class="tweet" tweetID="<%= infraction.tweet_id %>"></div>
+    </div>
+  </div>
+  <div class="gallery-container">
+    <h4>Imágenes de la infracción:</h4>
+    <div class="main-gallery-test">
+      <% infraction.evidences.each do |ev| %>
+        <div class="gallery-img">
+          <a class="fancybox" rel="group-<%= infraction.id %>" href="<%= ev.media.url %>"><%= image_tag ev.media.horizontal.url %></a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <a href="#infraccion-<%= infraction.id %>" class="show-infraction" id="ver-infraccion-<%= infraction.id %>" title="Ver infracción">Ver infracción</a>
+  <div class="infraction-map">
+    <h4><a href="#" data-infraction-id="<%= infraction.id %>" title="Ver mapa" class="see-map">Ver mapa</a></h4>
+    <%= render 'infractions/map', infraction: infraction %>
+  </div>
 </div>
-<%= render 'infractions/map', infraction: infraction %>

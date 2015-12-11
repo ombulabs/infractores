@@ -31,10 +31,9 @@ class Infraction < ActiveRecord::Base
       tweet: tweet,
       description: tweet.source.text,
       lat: lat,
-      lon: lon
+      lon: lon,
+      reported_at: tweet.source["created_at"]
     )
-
-    json = tweet.json
 
     result.evidences = Evidence.build_from(tweet)
 

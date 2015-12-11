@@ -1,0 +1,101 @@
+/* Infraction's slider */
+
+@import "1-utilities/variables";
+
+.gallery-container{
+  margin: 2%;
+  overflow: hidden;
+  h4{
+    margin-left: 2%;
+  }
+  .main-gallery-test{
+    margin-left: 2%;
+    a.fancybox{
+      cursor: pointer;
+      display: block !important;
+      position: relative;
+      position: relative;
+      float: left;
+      width: 32%;
+      margin: 0 1% 1% 0;
+      height: 100px;
+      overflow: hidden;
+      img{
+        width: 100%
+      }
+      &:before{
+        opacity: 0;
+        content: "\f00e";
+        font-family: 'FontAwesome';
+        position: absolute;
+        top: 43%;
+        left: 40%;
+        width: 30px;
+        background-color: #FCE67A;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 16px;
+        font-size: 16px;
+        text-align: center;
+        border: 3px solid #FCE67A;
+      }
+      &:hover{
+        &:before{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span{
+  background: image-url("gallery-buttons.png");
+}
+#fancybox-loading{
+  background-position: 0 -130px;
+}
+.fancybox-prev span, .fancybox-next span{
+  height: 44px;
+  width: 44px;
+}
+.fancybox-next span{
+  background-position: 0 -45px;
+}
+.fancybox-prev span{
+  background-position: 0 -88px;
+}
+.fancybox-close{
+  height: 44px;
+  width: 44px;
+  top: 0;
+  right: 0;
+}
+.fancybox-skin{
+  background: $yellow;
+}
+.fancybox-nav span{
+  visibility: visible;
+}
+.fancybox-inner:before{
+  content: "";
+  position: absolute;
+  background: image-url("logo-infractores.svg");
+  background-size: 100%;
+  width: 130px;
+  height: 43px;
+  background-repeat: no-repeat;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+
+@media screen and (max-width: 500px){
+  .gallery-container{
+    .main-gallery-test{
+      margin-left: 2%;
+      a.fancybox{
+        width: 49%;
+        height: 80px;
+      }
+    }
+  }
+}

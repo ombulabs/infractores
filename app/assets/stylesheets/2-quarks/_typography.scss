@@ -1,0 +1,32 @@
+/* Colors */
+
+@import "1-utilities/variables";
+
+body {
+  font-family: 'Rubik', 'Helvetica', 'Arial', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 0px;
+  color: $black;
+  background-color: $red;
+}
+h1{
+  font-size: 36px;
+}
+h2{
+  font-size: 24px;
+}
+h3{
+  font-size: 20px;
+}
+h4{
+  font-size: 14px;
+}
+a{
+  color: $red;
+  font-weight: 400;
+  &:hover{
+    color: $red;
+    text-decoration: underline;
+  }
+}
