@@ -15,7 +15,7 @@
       <% end %>
     </div>
   </div>
-  <a href="#" class="show-infraction" id="infraction-marker-<%= infraction.id %>" title="Ver infracción">Ver infracción</a>
+  <a href="#infraccion-<%= infraction.id %>" class="show-infraction" id="ver-infraccion-<%= infraction.id %>" title="Ver infracción">Ver infracción</a>
   <div class="infraction-map">
     <h4><a href="#" data-infraction-id="<%= infraction.id %>" title="Ver mapa" class="see-map">Ver mapa</a></h4>
     <%= render 'infractions/map', infraction: infraction %>

@@ -2,7 +2,7 @@
   <div class="span12">
     <ul class="span8 infractions">
       <% @infractions.each do |infraction| %>
-        <li id="infraction-<%= infraction.id %>" class="infraction span12 <%= cycle('odd', 'even') %>">
+        <li id="infraccion-<%= infraction.id %>" class="infraction span12 <%= cycle('odd', 'even') %>">
           <%= render 'infractions/summary', infraction: infraction %>
         </li>
       <% end %>
@@ -12,51 +12,7 @@
 <div class="main-map">
   <div class="map" id="map_canvas_main"></div>
   <script>
-    var infraction_markers = <%= raw @infraction_markers.to_json %>;
-    var redMarker = 'http://maps.gstatic.com/mapfiles/markers2/marker.png';
-    var blueMarker = 'http://maps.gstatic.com/mapfiles/markers2/boost-marker-mapview.png';
-    var allMarkers = [];
-    function resetMapAndPaintMarker(myMarker) {
-      $.each(allMarkers, function(i, marker) {
-        marker.setIcon(redMarker)
-      });
-      myMarker.setIcon(blueMarker);
-    }
-    function initialize_main_map() {
-      var myLatLng = {lat: -34.592894, lng: -58.452826 };
-      var mapCanvas = document.getElementById('map_canvas_main');
-      var mapOptions = {
-        center: myLatLng,
-        zoom: 13,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      }
-      var map = new google.maps.Map(mapCanvas, mapOptions);
-      $.each(infraction_markers, function(i, marker_data) {
-        var latitude = parseFloat(marker_data[0]);
-        var longitude = parseFloat(marker_data[1]);
-        var latLng = new google.maps.LatLng(latitude, longitude);
-        var marker = new google.maps.Marker({
-          map: map,
-          position: latLng,
-          icon: redMarker
-        });
-        allMarkers.push(marker);
-        google.maps.event.addListener(marker, 'click', function() {
-          var infraction_div = "#infraction-" + marker_data[2];
-          $('html, body').animate({
-            scrollTop: $(infraction_div).offset().top
-          }, 300);
-          resetMapAndPaintMarker(marker);
-        });
-        $("#infraction-marker-" + marker_data[2]).click(function(evt) {
-          evt.preventDefault();
-          map.panTo(latLng);
-          map.setZoom(18);
-          resetMapAndPaintMarker(marker);
-        });
-      });
-    }
-    google.maps.event.addDomListener(window, 'load', initialize_main_map );
+    var infractionMarkers = <%= raw @infraction_markers.to_json %>;
   </script>
 </div>
 <!-- /.row -->
