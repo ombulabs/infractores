@@ -11,10 +11,8 @@ window.onload = (function(){
         cards        : 'hidden',  // or visible
         linkColor    : '#cc0000', // default is blue
         theme        : 'light'    // or dark
-      })
-    .then (function (el) {
-      el.contentDocument.querySelector(".footer").style.display = "none";
-    });
+      }
+    )
   });
 
 });
