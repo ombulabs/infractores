@@ -1,28 +1,41 @@
-== README
+# Infractores
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Infractores is a tool that lets anyone with a Twitter account report an infraction using a tweet.
 
-Things you may want to cover:
+The infractions are recorded and placed in a map along with the evidence supporting the report.
 
-* Ruby version
+## Considerations
 
-* System dependencies
+The project uses a Twitter application to find the tweets that describe an infraction. It also uses Amazon Web Services to store the evidence related to the infraction.
 
-* Configuration
+### Requirements
 
-* Database creation
+* Postgres 9.4.1+
+* Redis 3.0.1+
+* Ruby 2.2.1
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+### Setup your environment
 
-* Services (job queues, cache servers, search engines, etc.)
+    cp .env.sample .env
 
-* Deployment instructions
+You will **need** to enter your AWS and Twitter credentials in this file.
 
-* ...
+### Setup your database
 
+    rake db:create db:migrate
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Get infractions from Twitter
+
+    rake twitter:download_tweets
+
+## Start
+
+    foreman start
+
+This will start the Rails server and a Sidekiq worker to process the tweets.
+
+## License
+
+  [license]: LICENSE
