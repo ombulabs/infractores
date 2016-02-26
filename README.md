@@ -30,6 +30,8 @@ You will **need** to enter your AWS and Twitter credentials in this file.
 
     rake twitter:download_tweets
 
+This task will download all the mentions for the user associated with the Twitter credentials and this hashtag: [#InfractoresBA](https://twitter.com/hashtag/infractoresba?f=tweets&src=hash)
+
 ## Start
 
     foreman start
