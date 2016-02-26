@@ -40,4 +40,4 @@ This will start the Rails server and a Sidekiq worker to process the tweets.
 
 ## License
 
-See: [MIT License](LICENSE) [license]. 
+See: [MIT License](LICENSE). 
