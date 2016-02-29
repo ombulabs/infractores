@@ -1,8 +1,13 @@
 language: ruby
 rvm:
   - 2.2.3
+services:
+  - postgresql
 script: "bundle exec rake"
 gemfile:
   - Gemfile
+before_script:
+  - psql -c 'create database infractores_test;' -U postgres
+  - cp config/database.yml.sample config/database.yml
 before_install:
   - gem install bundler -v 1.11.2
