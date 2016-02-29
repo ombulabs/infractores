@@ -1,16 +1,16 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby '2.2.3'
+ruby "2.2.3"
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+# Bundle edge Rails instead: gem "rails", github: "rails/rails"
+gem "rails", "~> 4.2.5.1"
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem "pg"
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem "sass-rails", "~> 5.0"
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem "jquery-rails"
 
 # Twitter API
 gem "twitter", "~> 5.14.0"
@@ -28,39 +28,39 @@ gem "fog"
 gem "mini_magick"
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# gem "bcrypt", "~> 3.1.7"
 
 # Use Unicorn as the app server
-# gem 'unicorn'
-gem 'sidekiq', '~> 3.4.2'
+# gem "unicorn"
+gem "sidekiq", "~> 3.4.2"
 
 gem "thin"
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# gem "capistrano-rails", group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  # Call "byebug" anywhere in the code to stop execution and get a debugger console
+  gem "byebug"
 end
 
 group :development do
   gem "foreman"
   gem "bullet"
   gem "rack-livereload"
-  gem 'guard-livereload', '~> 2.4', require: false
+  gem "guard-livereload", "~> 2.4", require: false
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem "web-console", "~> 2.0"
 end
 
 group :production do
-  gem "uglifier"
+  gem "uglifier", "~> 2.7.2"
 end
 
 group :test do
-  gem 'simplecov', require: false
-  gem 'factory_girl_rails', '4.5.0'
-  gem 'rspec-rails', '~> 3.3.3'
-  gem 'webmock'
-  gem 'vcr'
+  gem "simplecov", require: false
+  gem "factory_girl_rails", "4.5.0"
+  gem "rspec-rails", "~> 3.3.3"
+  gem "webmock"
+  gem "vcr"
 end
