@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1660'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 15 Apr 2016 14:15:53 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Fri, 15 Apr 2016 14:15:53 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_d
+      Set-Cookie:
+      - guest_id=v1%3A146072975372138632; Domain=.twitter.com; Path=/; Expires=Sun,
+        15-Apr-2018 14:15:53 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - c0f69f2665ccc66bd58b66538d077411
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '12'
+      X-Rate-Limit-Reset:
+      - '1460729929'
+      X-Response-Time:
+      - '201'
+      X-Transaction:
+      - 30cee5f01bb67ddd
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":3394083203,"id_str":"3394083203","name":"Infractores de BA","screen_name":"InfractoresBA","location":"Buenos
+        Aires, Argentina","description":"Escrachando infractores desde 2015","url":"https:\/\/t.co\/xSmyRATKXR","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/xSmyRATKXR","expanded_url":"http:\/\/www.infractoresba.com.ar","display_url":"infractoresba.com.ar","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":6,"friends_count":3,"listed_count":0,"created_at":"Wed
+        Jul 29 16:23:27 +0000 2015","favourites_count":4,"utc_offset":-10800,"time_zone":"Buenos
+        Aires","geo_enabled":false,"verified":false,"statuses_count":10,"lang":"en","status":{"created_at":"Mon
+        Apr 04 23:25:47 +0000 2016","id":717131080218845184,"id_str":"717131080218845184","text":"RT
+        @_nesto: La gente que estaciona as\u00ed es un peligro @InfractoresBA https:\/\/t.co\/DGNfrQvopZ","entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"_nesto","name":"E
+        r n e s t o","id":213085472,"id_str":"213085472","indices":[3,10]},{"screen_name":"InfractoresBA","name":"Infractores
+        de BA","id":3394083203,"id_str":"3394083203","indices":[53,67]}],"urls":[],"media":[{"id":717023915835531270,"id_str":"717023915835531270","indices":[68,91],"media_url":"http:\/\/pbs.twimg.com\/media\/CfNhc9bWIAY595g.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CfNhc9bWIAY595g.jpg","url":"https:\/\/t.co\/DGNfrQvopZ","display_url":"pic.twitter.com\/DGNfrQvopZ","expanded_url":"http:\/\/twitter.com\/_nesto\/status\/717023979454771201\/photo\/1","type":"photo","sizes":{"large":{"w":1024,"h":768,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":450,"resize":"fit"},"small":{"w":340,"h":255,"resize":"fit"}},"source_status_id":717023979454771201,"source_status_id_str":"717023979454771201","source_user_id":213085472,"source_user_id_str":"213085472"}]},"extended_entities":{"media":[{"id":717023915835531270,"id_str":"717023915835531270","indices":[68,91],"media_url":"http:\/\/pbs.twimg.com\/media\/CfNhc9bWIAY595g.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CfNhc9bWIAY595g.jpg","url":"https:\/\/t.co\/DGNfrQvopZ","display_url":"pic.twitter.com\/DGNfrQvopZ","expanded_url":"http:\/\/twitter.com\/_nesto\/status\/717023979454771201\/photo\/1","type":"photo","sizes":{"large":{"w":1024,"h":768,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":450,"resize":"fit"},"small":{"w":340,"h":255,"resize":"fit"}},"source_status_id":717023979454771201,"source_status_id_str":"717023979454771201","source_user_id":213085472,"source_user_id_str":"213085472"},{"id":717023915843919872,"id_str":"717023915843919872","indices":[68,91],"media_url":"http:\/\/pbs.twimg.com\/media\/CfNhc9dWIAA_6R7.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CfNhc9dWIAA_6R7.jpg","url":"https:\/\/t.co\/DGNfrQvopZ","display_url":"pic.twitter.com\/DGNfrQvopZ","expanded_url":"http:\/\/twitter.com\/_nesto\/status\/717023979454771201\/photo\/1","type":"photo","sizes":{"large":{"w":1024,"h":768,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":450,"resize":"fit"},"small":{"w":340,"h":255,"resize":"fit"}},"source_status_id":717023979454771201,"source_status_id_str":"717023979454771201","source_user_id":213085472,"source_user_id_str":"213085472"},{"id":717023915856510978,"id_str":"717023915856510978","indices":[68,91],"media_url":"http:\/\/pbs.twimg.com\/media\/CfNhc9gWQAILG2l.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CfNhc9gWQAILG2l.jpg","url":"https:\/\/t.co\/DGNfrQvopZ","display_url":"pic.twitter.com\/DGNfrQvopZ","expanded_url":"http:\/\/twitter.com\/_nesto\/status\/717023979454771201\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":255,"resize":"fit"},"medium":{"w":600,"h":450,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1024,"h":768,"resize":"fit"}},"source_status_id":717023979454771201,"source_status_id_str":"717023979454771201","source_user_id":213085472,"source_user_id_str":"213085472"}]},"truncated":false,"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter
+        for iPhone\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Mon
+        Apr 04 16:20:13 +0000 2016","id":717023979454771201,"id_str":"717023979454771201","text":"La
+        gente que estaciona as\u00ed es un peligro @InfractoresBA https:\/\/t.co\/DGNfrQvopZ","entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"InfractoresBA","name":"Infractores
+        de BA","id":3394083203,"id_str":"3394083203","indices":[41,55]}],"urls":[],"media":[{"id":717023915835531270,"id_str":"717023915835531270","indices":[56,79],"media_url":"http:\/\/pbs.twimg.com\/media\/CfNhc9bWIAY595g.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CfNhc9bWIAY595g.jpg","url":"https:\/\/t.co\/DGNfrQvopZ","display_url":"pic.twitter.com\/DGNfrQvopZ","expanded_url":"http:\/\/twitter.com\/_nesto\/status\/717023979454771201\/photo\/1","type":"photo","sizes":{"large":{"w":1024,"h":768,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":450,"resize":"fit"},"small":{"w":340,"h":255,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":717023915835531270,"id_str":"717023915835531270","indices":[56,79],"media_url":"http:\/\/pbs.twimg.com\/media\/CfNhc9bWIAY595g.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CfNhc9bWIAY595g.jpg","url":"https:\/\/t.co\/DGNfrQvopZ","display_url":"pic.twitter.com\/DGNfrQvopZ","expanded_url":"http:\/\/twitter.com\/_nesto\/status\/717023979454771201\/photo\/1","type":"photo","sizes":{"large":{"w":1024,"h":768,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":450,"resize":"fit"},"small":{"w":340,"h":255,"resize":"fit"}}},{"id":717023915843919872,"id_str":"717023915843919872","indices":[56,79],"media_url":"http:\/\/pbs.twimg.com\/media\/CfNhc9dWIAA_6R7.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CfNhc9dWIAA_6R7.jpg","url":"https:\/\/t.co\/DGNfrQvopZ","display_url":"pic.twitter.com\/DGNfrQvopZ","expanded_url":"http:\/\/twitter.com\/_nesto\/status\/717023979454771201\/photo\/1","type":"photo","sizes":{"large":{"w":1024,"h":768,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":450,"resize":"fit"},"small":{"w":340,"h":255,"resize":"fit"}}},{"id":717023915856510978,"id_str":"717023915856510978","indices":[56,79],"media_url":"http:\/\/pbs.twimg.com\/media\/CfNhc9gWQAILG2l.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/CfNhc9gWQAILG2l.jpg","url":"https:\/\/t.co\/DGNfrQvopZ","display_url":"pic.twitter.com\/DGNfrQvopZ","expanded_url":"http:\/\/twitter.com\/_nesto\/status\/717023979454771201\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":255,"resize":"fit"},"medium":{"w":600,"h":450,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1024,"h":768,"resize":"fit"}}}]},"truncated":false,"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter
+        for iPhone\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":{"type":"Point","coordinates":[-34.56967272,-58.45298837]},"coordinates":{"type":"Point","coordinates":[-58.45298837,-34.56967272]},"place":{"id":"018f1cde6bad9747","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/018f1cde6bad9747.json","place_type":"city","name":"Ciudad
+        Aut\u00f3noma de Buenos Aires","full_name":"Ciudad Aut\u00f3noma de Buenos
+        Aires, Argentina","country_code":"AR","country":"Argentina","contained_within":[],"bounding_box":{"type":"Polygon","coordinates":[[[-58.5317922,-34.674453],[-58.353494,-34.674453],[-58.353494,-34.534177],[-58.5317922,-34.534177]]]},"attributes":{}},"contributors":null,"is_quote_status":false,"retweet_count":1,"favorite_count":0,"favorited":false,"retweeted":true,"possibly_sensitive":false,"lang":"es"},"is_quote_status":false,"retweet_count":1,"favorite_count":0,"favorited":false,"retweeted":true,"possibly_sensitive":false,"lang":"es"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"000000","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme5\/bg.gif","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme5\/bg.gif","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/626446080654331905\/D6sxxJpo_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/626446080654331905\/D6sxxJpo_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/3394083203\/1441023938","profile_link_color":"DD2E44","profile_sidebar_border_color":"000000","profile_sidebar_fill_color":"000000","profile_text_color":"000000","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version:
+  recorded_at: Fri, 15 Apr 2016 14:15:54 GMT
+recorded_with: VCR 2.9.3
