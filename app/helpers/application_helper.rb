@@ -10,10 +10,10 @@ module ApplicationHelper
   end
 
   def screen_name
-    "@#{TwitterService.screen_name}"
+    "@#{TwitterService.instance.screen_name}"
   end
 
   def screen_name_hashtag
-    "##{TwitterService.screen_name}"
+    "##{TwitterService.instance.screen_name}"
   end
 end
