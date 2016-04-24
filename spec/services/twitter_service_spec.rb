@@ -32,6 +32,9 @@ RSpec.describe "TwitterService" do
         allow(twitter_service.client)
           .to(receive(:search)
             .and_return([tweet]))
+        allow(twitter_service.client)
+          .to(receive(:status)
+            .and_return(tweet))
       end
 
       it "creates one Tweet per mention and search" do
