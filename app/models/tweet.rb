@@ -17,7 +17,8 @@ class Tweet < ActiveRecord::Base
   # @param tuit [Twitter::Tweet]
   # @return [Tweet]
   def self.find_or_create!(tuit)
-    opts = {id: tuit.id}
+    opts = {
+      id: tuit.id }
 
     if result = self.find_by(opts)
       result.update_attributes!(json: tuit.to_json)
