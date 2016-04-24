@@ -55,6 +55,7 @@ end
 
 group :production do
   gem "uglifier", "~> 2.7.2"
+  gem "rails_12factor"
 end
 
 group :test do

@@ -30,7 +30,7 @@ You will **need** to enter your AWS and Twitter credentials in this file.
 
     rake twitter:download_tweets
 
-This task will download all the mentions for the user associated with the Twitter credentials and this hashtag: [#InfractoresBA](https://twitter.com/hashtag/infractoresba?f=tweets&src=hash)
+This task will download all the mentions for the user associated with the Twitter credentials and its hashtag, for example: [#InfractoresBA](https://twitter.com/hashtag/infractoresba?f=tweets&src=hash)
 
 ## Start
 
@@ -40,4 +40,4 @@ This will start the Rails server and a Sidekiq worker to process the tweets.
 
 ## License
 
-See: [MIT License](LICENSE). 
+See: [MIT License](LICENSE).

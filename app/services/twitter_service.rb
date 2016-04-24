@@ -23,12 +23,16 @@ class TwitterService
       Tweet.find_or_create!(tuit)
     end
 
-    tl = client.search "#InfractoresBA -rt"
+    tl = client.search "##{screen_name} -rt"
 
     tl.each do |tuit|
       tuit = client.status tuit.id
       Tweet.find_or_create!(tuit)
     end
+  end
+
+  def screen_name
+    @screen_name ||= client.user.screen_name
   end
 
   private
