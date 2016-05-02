@@ -3,7 +3,7 @@ require "rails_helper"
 describe InfractionsController, type: :controller do
   render_views
 
-  let(:evidence) { Evidence.new }
+  let(:evidence) { FactoryGirl.create(:evidence) }
   let!(:infraction) do
     FactoryGirl.create(:infraction,
                        lat: 13.37,
