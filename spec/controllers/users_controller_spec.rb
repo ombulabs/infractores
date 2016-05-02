@@ -16,12 +16,4 @@ describe UsersController, type: :controller do
       expect(response.status).to eq(200)
     end
   end
-
-  describe "#show" do
-    xit "successful" do
-      get :show, id: user.id
-
-      expect(response.status).to eq(200)
-    end
-  end
 end
