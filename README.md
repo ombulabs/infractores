@@ -1,12 +1,16 @@
 # Infractores
 
-Infractores is a tool that lets anyone with a Twitter account report an infraction using a tweet.
+Infractores is a tool that lets anyone with a Twitter account report a parking
+violation with a tweet.
 
-The infractions are recorded and placed in a map along with the evidence supporting the report.
+The violations are recorded and placed in a map along with evidence supporting
+the report.
 
 ## Considerations
 
-The project uses a Twitter application to find the tweets that describe an infraction. It also uses Amazon Web Services to store the evidence related to the infraction.
+The project uses a Twitter application to find the tweets that describe a
+violation. It also uses Amazon Web Services to store the evidence related to the
+violation.
 
 ### Requirements
 
@@ -20,17 +24,18 @@ The project uses a Twitter application to find the tweets that describe an infra
 
     cp .env.sample .env
 
-You will **need** to enter your AWS and Twitter credentials in this file.
+You **must enter** your AWS and Twitter credentials in this file.
 
 ### Setup your database
 
     rake db:create db:migrate
 
-### Get infractions from Twitter
+### Get parking violations from Twitter
 
     rake twitter:download_tweets
 
-This task will download all the mentions for the user associated with the Twitter credentials and its hashtag, for example: [#InfractoresBA](https://twitter.com/hashtag/infractoresba?f=tweets&src=hash)
+This task will download all the mentions for the user associated with the
+Twitter credentials and its hashtag, for example: [#InfractoresBA](https://twitter.com/hashtag/infractoresba?f=tweets&src=hash)
 
 ## Start
 
