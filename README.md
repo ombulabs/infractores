@@ -1,5 +1,7 @@
 # Infractores
 
+[![Build Status](https://travis-ci.org/ombulabs/infractores.png)](https://travis-ci.org/ombulabs/infractores)
+
 Infractores is a tool that lets anyone with a Twitter account report a parking
 violation with a tweet.
 
