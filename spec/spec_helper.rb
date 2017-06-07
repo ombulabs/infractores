@@ -1,3 +1,4 @@
+require 'infractores/version'
 require 'webmock/rspec'
 require 'fog/aws'
 require 'vcr'
